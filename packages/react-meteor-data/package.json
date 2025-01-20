@@ -22,6 +22,7 @@
     "react-meteor-data.d.ts"
   ],
   "exports": {
+    "types": "./react-meteor-data.d.ts",
     "import": "./dist/index.mjs",
     "require": "./dist/index.js"
   },

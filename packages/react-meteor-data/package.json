@@ -29,8 +29,8 @@
     },
     "./suspense": {
       "types": "./suspense/react-meteor-data.d.ts",
-      "import": "./suspense/index.mjs",
-      "require": "./suspense/index.js"
+      "import": "./dist/suspense/index.mjs",
+      "require": "./dist/suspense/index.js"
     }
   },
   "types": "react-meteor-data.d.ts",

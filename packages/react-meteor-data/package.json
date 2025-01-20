@@ -22,9 +22,16 @@
     "react-meteor-data.d.ts"
   ],
   "exports": {
-    "types": "./react-meteor-data.d.ts",
-    "import": "./dist/index.mjs",
-    "require": "./dist/index.js"
+    ".": {
+      "types": "./react-meteor-data.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./suspense": {
+      "types": "./suspense/react-meteor-data.d.ts",
+      "import": "./suspense/index.mjs",
+      "require": "./suspense/index.js"
+    }
   },
   "types": "react-meteor-data.d.ts",
   "dependencies": {

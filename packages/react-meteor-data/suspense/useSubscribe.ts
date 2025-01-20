@@ -15,7 +15,7 @@ interface Entry {
   error?: unknown
 }
 
-export function useSubscribeSuspense(name: string, ...params: EJSON[]) {
+const useSubscribeSuspenseClient = (name: string, ...params: EJSON[]) => {
   const cachedSubscription =
     cachedSubscriptions.find(x => x.name === name && isEqual(x.params, params))
 
@@ -32,7 +32,7 @@ export function useSubscribeSuspense(name: string, ...params: EJSON[]) {
               isEqual(x.params, cachedSubscription.params))
         }
       }, 0)
-    }, [name, ...params])
+    }, [name, EJSON.stringify(params)])
 
   if (cachedSubscription != null) {
     if ('error' in cachedSubscription) throw cachedSubscription.error
@@ -63,5 +63,11 @@ export function useSubscribeSuspense(name: string, ...params: EJSON[]) {
 
   throw subscription.promise
 }
+
+const useSubscribeSuspenseServer = (name?: string, ...args: any[]) => undefined;
+
+export const useSubscribeSuspense = Meteor.isServer
+? useSubscribeSuspenseServer
+: useSubscribeSuspenseClient
 
 export const useSubscribe = useSubscribeSuspense

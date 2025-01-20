@@ -48,6 +48,7 @@
     "@types/lodash.remove": "^4.7.5",
     "@types/meteor": "^1.4.76",
     "@types/react": "^17.0.16",
+    "picocolors": "^1.1.1",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   }

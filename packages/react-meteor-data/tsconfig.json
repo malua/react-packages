@@ -111,6 +111,10 @@
     "useFind.ts",
     "useTracker.ts",
     "useSubscribe.ts",
-    "withTracker.tsx"
+    "withTracker.tsx",
+    "suspense/index.js",
+    "suspense/useFind.ts",
+    "suspense/useSubscribe.ts",
+    "suspense/useTracker.ts"
   ]
 }

@@ -3,7 +3,7 @@ import { defineConfig } from 'tsup';
 import pc from 'picocolors';
 
 export default defineConfig({
-    entry: ['index.js', "suspense/index.js"],
+    entry: ['index.ts', "suspense/index.js"],
     outDir: 'dist',
     format: ['esm', 'cjs'],
     external: ['meteor/meteor', 'meteor/mongo', 'meteor/tracker'],
